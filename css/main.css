@@ -1,0 +1,496 @@
+@charset "utf-8";
+html{
+    font-size: 62.5%;
+}
+
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+    color: #333333;
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 1.6rem;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.wrapper{
+    max-width: 960px;
+    margin: auto;
+}
+
+/*----------
+hero-image
+-------------*/
+.hero-image{
+    position: relative;
+    height: 350px;
+}
+.hero-image img{
+    width: 100%;
+    height: 100%;
+}
+.title-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+}
+.hero-image__title{
+    font-size: 4.8rem;
+    color: white;
+    width: 960px;
+    margin: 0 0 40px;
+}
+.hero-image__text{
+    font-size: 3.6rem;
+    color: white;
+    width: 960px;
+}
+
+/*------------
+header
+-------------*/
+.header{
+    background-color: #ffd61a;
+}
+.header-wrapper{
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 5px dotted #efefef;
+}
+
+.header-wrapper>img{
+    height: 60%;
+}
+
+.nav-list{    
+    display: flex;
+    font-size: 2.1rem;
+}
+
+.nav-item{
+    margin-left: 24px;
+}
+
+.nav-item>a{
+    color: white;
+    text-transform: uppercase;
+}
+
+/*----------
+about 
+-------------*/
+
+.about{    
+    padding: 120px 0 64px; 
+}
+.about__title{
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin: 0 0 24px;
+    color: #ffd61a;
+}
+
+.about__title02{
+    margin: 0 0 64px;
+}
+
+.about__text{
+    margin: 0 0 80px;
+}
+
+.about__text p{
+    margin: 0 0 40px;
+}
+
+
+
+/*----------- 
+course 
+-------------*/
+.course__title{
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin: 0 0 24px;
+    color: #222222;
+}
+
+.course__text{
+    margin: 0 0 64px;
+}
+
+
+/*-----
+course説明欄
+----- */
+
+.course-wrapper{
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+}
+.course-wrapper img{
+    width: 50%;
+}
+.course-wrapper02{
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+.course-wrapper02 img{
+    width:50%
+}
+
+.course-box__title{
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+}
+.course-box__text{
+    text-align: justify;
+    text-align: inter-ideograph;
+}
+
+.course__01{
+    width: 50%;
+    margin-left: 48px;
+    display: flex;
+    justify-content: flex-start;
+}
+.course__01__item{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.course__02{
+    width: 50%;
+    margin-right: 48px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.course__02__item{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/* ------------
+News
+--------------*/
+.news{
+    padding: 64px 0 48px;
+}
+.news-title{
+    margin: 0 0 24px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #ffd61a;
+}
+.news-title02{
+    margin: 0 0 64px;
+}
+.news__list{
+    display: flex;
+    margin: 0 0 56px;
+}
+.news__item{
+    width: 33.333%;
+    padding: 0 16px 0;
+}
+.news__eyecatch{
+    margin: 0 0 32px;
+}
+.news__heading{
+    margin: 24px 0 0;
+    font-weight: normal;
+}
+.btn{
+    display: block;
+    width: 300px;
+    margin: auto;
+    padding: 19.5px 0;
+    background-color:#ffd61a;
+    color: white;
+    font-size: 2.1rem;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #ffb61a;
+}
+
+
+/* ------------
+ACCESS
+--------------*/
+.access{
+    padding: 64px 0 80px;
+    background-color: #fafafa;
+}
+.access__title{
+    margin: 0 0 24px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #222222;
+}
+.access__title02{
+    margin: 0 0 64px;
+}
+.gmap{
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.gmap iframe{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.access-wrapper{
+    max-width: 640px;
+    margin: auto;
+}
+.access-inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 64px auto 0;
+}
+.access-title{
+    margin: 0 0 24px;
+    width: 100px;
+}
+.access-item{
+    margin: 0 0 24px 48px;
+    width: 480px;
+}
+
+
+
+/* ------------
+CONTACT
+--------------*/
+.contact{
+    padding: 60px 0 120px;
+}
+.form-wrapper{
+    max-width: 640px;
+    margin: auto;
+}
+
+.contact__title{
+    margin: 0 0 24px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #222222;
+}
+.contact__title02{
+    margin: 0 0 64px;
+}
+
+.contact__text{
+    margin: 0 0 80px;
+}
+.contact__text>p{
+    margin: 0 0 32px;
+}
+.form-inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 40px;
+}
+.form-title{
+    width: 120px;
+    margin: 0 120px 0 0;
+    font-weight: bold;
+}
+.form-item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 328px;
+    margin: 0 0 32px;
+}
+.form-parts{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border: solid 1px #bfbfbf;
+    font-size: 1.6rem;
+}
+.form-check{
+    width: 390px;
+}
+.form-label{
+    font-size: 1.4rem;
+    margin: 0 0 24px;
+
+}
+input[type*="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 24px;
+    height: 24px;
+    margin: 0 40px 0 0;
+    border: solid 1px #f0ebe5;
+    border-radius: 25%;
+}
+input[type*="checkbox"]:checked{
+    background-color: #f0ebe5;
+}
+.btn-submit{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    width: 298px;
+    height: 54px;
+    font-size: 1.8rem;
+    padding: 18px 0;
+}
+
+/* ------------
+footer
+--------------*/
+.footer{
+    background-color: #707070;
+    padding: 32px 0;
+}
+.footer .wrapper{
+    position: relative;
+}
+.btn-pagetop{
+    position: absolute;
+    top: -100px;
+    right: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ffd61a;
+}
+.icon-up{
+    display: block;
+    padding: 18px 0;
+    color: white;
+    font-size: 2.4rem;
+}
+.copyrights{
+    color: white;
+    font-size: 1.8rem;
+}
+
+
+@media screen and (max-width:640px){
+
+    /* * {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+    }    */
+
+    body{
+        width: 100%;
+    }
+    /*-----------------------
+    * about
+    -------------------------*/
+    .wrapper{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 10px;
+    }
+    .about{
+        padding: 80px 0 60px;
+    }
+    .about__title{
+        margin: 0 0 20px;
+    }
+    .about__title02{
+        margin: 0 0 60px;
+    }
+    .about__text p{
+        margin: 0 0 24px;
+    }
+
+    /*-----------------------
+    * course
+    -------------------------*/
+    .course__title{
+        margin: 0 0 20px;
+    }
+    .course__text{
+        margin: 0 0 60px;
+    }
+    .course-wrapper{
+        display: block;
+    }
+    .course-wrapper img{
+        width: 100%;
+    }
+    .course-wrapper02{
+        display: block;
+    }
+    .course-wrapper02 img{
+        width: 100%;
+    }
+    .course__01{
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+    }
+    .course__02{
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+    }
+    .course__01__item{
+        margin: 40px 10px;
+    }
+    .course__02__item{
+        margin: 40px 10px;
+    }
+    .course-box__title{
+        font-size: 1.8rem;
+        margin: 0 0 24px;
+        text-align: center;
+    }
+
+
+
+}
