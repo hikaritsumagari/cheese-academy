@@ -4,8 +4,8 @@ html{
 }
 
 * {
-	padding:0;
-	margin:0;
+	padding: 0;
+	margin: 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
@@ -14,17 +14,19 @@ html{
 }
 
 body{
+    margin: 0 auto;
     color: #333333;
 	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
-	line-height: 1.75;
+    line-height: 1.75;
 	font-size: 1.6rem;
 }
-
 img{
     max-width: 100%;
     height: auto;
 }
-
+ul{
+    list-style: none;
+}
 .text-center{
     text-align: center;
 }
@@ -50,6 +52,7 @@ hero-image
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -58,13 +61,13 @@ hero-image
 .hero-image__title{
     font-size: 4.8rem;
     color: white;
-    width: 960px;
+    width: 100%;
     margin: 0 0 40px;
 }
 .hero-image__text{
     font-size: 3.6rem;
     color: white;
-    width: 960px;
+    width: 100%;
 }
 
 /*------------
@@ -72,21 +75,28 @@ header
 -------------*/
 .header{
     background-color: #ffd61a;
+    width: 100%;
+    border-bottom: 5px dotted #efefef;
 }
 .header-wrapper{
     height: 80px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 5px dotted #efefef;
 }
 
 .header-wrapper>img{
     height: 60%;
 }
+.menu_trigger{
+    display: none;
+    
+}
 
 .nav-list{    
     display: flex;
+    margin-left: auto;
+    max-width: 100%;
     font-size: 2.1rem;
 }
 
@@ -124,7 +134,15 @@ about
 .about__text p{
     margin: 0 0 40px;
 }
-
+.about__image{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+.about__image>img{
+    width: 25%;
+}
 
 
 /*----------- 
@@ -170,33 +188,17 @@ course説明欄
 }
 .course-box__text{
     text-align: justify;
-    text-align: inter-ideograph;
 }
 
 .course__01{
     width: 50%;
-    margin-left: 48px;
-    display: flex;
-    justify-content: flex-start;
-}
-.course__01__item{
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    margin: auto;
+    padding: 24px 24px 24px 48px;
 }
 .course__02{
     width: 50%;
-    margin-right: 48px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.course__02__item{
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    margin: auto;
+    padding: 24px 48px 24px 24px;
 }
 
 
@@ -206,13 +208,13 @@ News
 .news{
     padding: 64px 0 48px;
 }
-.news-title{
+.news__title{
     margin: 0 0 24px;
     font-size: 2.4rem;
     font-weight: bold;
     color: #ffd61a;
 }
-.news-title02{
+.news__title02{
     margin: 0 0 64px;
 }
 .news__list{
@@ -238,6 +240,7 @@ News
     background-color:#ffd61a;
     color: white;
     font-size: 2.1rem;
+    border-radius: 10px;
 }
 .btn:hover{
     cursor: pointer;
@@ -347,6 +350,7 @@ CONTACT
     padding: 8px;
     border: solid 1px #bfbfbf;
     font-size: 1.6rem;
+    border-radius: 10px;
 }
 .form-check{
     width: 390px;
@@ -378,6 +382,7 @@ input[type*="checkbox"]:checked{
     height: 54px;
     font-size: 1.8rem;
     padding: 18px 0;
+    border-radius: 10px;
 }
 
 /* ------------
@@ -414,19 +419,132 @@ footer
 
 @media screen and (max-width:640px){
 
-    /* * {
-	padding:0;
-	margin:0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-o-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-    }    */
 
-    body{
+
+    /*-----------------------
+    * header
+    -------------------------*/
+    .header{
+        position: fixed;
+        top: 0;
         width: 100%;
     }
+    .header-wrapper{
+        display: block;
+        height: 72px;
+    }
+    .header-wrapper>img{
+        width: auto;
+        margin: 15px auto;
+    }
+
+    .menu_trigger,.menu_trigger span {
+        display: inline-block;
+        transition: all .4s;
+        box-sizing: border-box;
+    }
+    .menu_trigger {
+        position: fixed;
+        top: 12px;
+        right: 12px;
+        z-index: 100;
+        width: 50px;
+        height: 40px;
+        background: none;
+        border: none;
+        appearance: none;
+        cursor: pointer;
+    }
+    .menu_trigger span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color:white;
+        border-radius: 3px;
+    }
+    .menu_trigger span:nth-of-type(1) {
+        top: 0;
+    }
+    .menu_trigger span:nth-of-type(2) {
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+    .menu_trigger span:nth-of-type(3) {
+        bottom: 0;
+    }
+    .menu_trigger.active span:nth-of-type(1) {
+        transform: translateY(20px) rotate(-315deg) scale(.8);
+    }
+    .menu_trigger.active span:nth-of-type(2) {
+        width: 60px;
+        height: 60px;
+        background-color: transparent;
+        border: 3px solid #fff;
+        border-radius: 50%;
+    }
+    .menu_trigger.active span:nth-of-type(3) {
+        transform: translateY(-20px) rotate(315deg) scale(.8);
+    }
+    .menu_trigger:not(.active):hover span:nth-of-type(1) {
+    top: 6px;
+    }
+    .menu_trigger:not(.active):hover span:nth-of-type(3) {
+    bottom: 6px;
+    }
+    .menu_trigger.active span:nth-of-type(1) {
+    transform: translateY(20px) rotate(-45deg);
+    }
+    .menu_trigger.active span:nth-of-type(2) {
+    opacity: 0;
+    }
+    .menu_trigger.active span:nth-of-type(3) {
+    transform: translateY(-20px) rotate(45deg);
+    }
+
+    .nav-list{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,214,26,0.8);
+        padding: 84px 0 0;
+        transition: 0.5s ease;
+        /* visibility: hidden; */
+        /* opacity: 0; */
+    }
+    .open .nav-list{
+        visibility: visible;
+        opacity: 1;
+    }
+    .nav-item{
+        margin: 0 0 40px;
+        text-align: center;
+    }
+    .nav-item>a{
+        display: block;
+        font-size: 2.1rem;
+    }
+
+    /*-----------------------
+    * hero-image
+    -------------------------*/
+    .hero-image{
+        margin: 64px 0 0;
+    }
+    .hero-image__title{
+        font-size: 2.4rem;
+        margin: 0 0 20px;
+    }
+    .hero-image__text{
+        font-size: 1.8rem;
+    }
+
+
+
     /*-----------------------
     * about
     -------------------------*/
@@ -436,16 +554,20 @@ footer
         padding: 0 10px;
     }
     .about{
-        padding: 80px 0 60px;
+        padding: 80px 0 40px;
     }
     .about__title{
         margin: 0 0 20px;
     }
     .about__title02{
-        margin: 0 0 60px;
+        margin: 0 0 40px;
+    }
+    .about__text{
+        margin: 0 auto 40px;
+        width: 80%;
     }
     .about__text p{
-        margin: 0 0 24px;
+        margin: 0 0 20px;
     }
 
     /*-----------------------
@@ -455,41 +577,161 @@ footer
         margin: 0 0 20px;
     }
     .course__text{
-        margin: 0 0 60px;
+        margin: 0 0 40px;
     }
     .course-wrapper{
         display: block;
+        text-align: center;
     }
     .course-wrapper img{
-        width: 100%;
+        width: 80%;
+        
     }
     .course-wrapper02{
         display: block;
+        text-align: center;
     }
     .course-wrapper02 img{
-        width: 100%;
+        width: 80%;
     }
     .course__01{
         width: 100%;
-        margin: auto;
-        justify-content: center;
+        padding: 20px 40px 40px;
     }
     .course__02{
         width: 100%;
-        margin: auto;
-        justify-content: center;
-    }
-    .course__01__item{
-        margin: 40px 10px;
-    }
-    .course__02__item{
-        margin: 40px 10px;
+        padding: 20px 40px 40px;
     }
     .course-box__title{
         font-size: 1.8rem;
-        margin: 0 0 24px;
+        margin: 0 0 20px;
         text-align: center;
     }
+
+
+
+
+    /*-----------------------
+    * news
+    -------------------------*/
+    .news{
+        padding: 40px 0 40px;
+    }
+    .news__title{
+        margin: 0 0 40px;
+    }
+    .news__title02{
+        margin: 0 0 20px;
+    }
+    .news__list{
+        display: block;
+        width: 100%;
+    }
+    .news__item{
+        width: 100%;
+    }
+    .news__eyecatch{
+        margin: 40px 0 10px;
+        width: 100%;
+        
+    }
+    .news__heading{
+        margin: 0 0 20px;
+    }
+    img{
+        width: 100%;
+    }
+    .btn{
+        width: 80%;
+        padding: 16.5px;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+
+
+    /*-----------------------
+    * access
+    *-------------------------*/
+    .access{
+        padding: 40px 0;
+    }
+    .access-wrapper{
+        padding: 0 10px;
+    }
+    .access__title{
+        margin: 0 0 20px;
+    }
+    .access__title02{
+        margin: 0 0 20px;
+    }
+    .access-inner{
+        display: block;
+        width: 100%;
+        margin: 40px 0 0;
+        text-align: center;
+    }
+    .access-title{
+        margin: 0 0 20px;
+        width: 100%
+    }
+    .access-item{
+        margin: 0 0 40px;
+        width: 100%
+    }
+
+    /*-----------------------
+    * contact
+    *-------------------------*/
+    .contact{
+        padding: 40px 0 80px;
+    }
+    .form-wrapper{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 10px;
+    }
+    .contact__title{
+        margin: 0 0 20px;
+    }
+    .contact__title02{
+        margin: 0 0 40px;
+    }
+    .contact__text p{
+        margin: 0 0 20px;
+    }
+    .form-inner{
+        display: block;
+        width: 100%;
+        margin: 0 0 50px;
+    }
+    .form-title{
+        width: 100%;
+        margin: 0 0 20px;
+        padding: 0;
+        text-align: left;
+    }
+    .form-item{
+        width: 100%;
+        margin: 0 0 40px;
+    }
+    .form-parts{
+        padding: 10px 8px;
+    }
+
+    /*-----------------------
+    * contact
+    *-------------------------*/
+    .footer{
+        padding: 20px 0;
+    }
+    .btn-pagetop{
+        display: none;
+    }
+    .copyrights{
+        font-size: 1.2rem;
+    }
+
 
 
 

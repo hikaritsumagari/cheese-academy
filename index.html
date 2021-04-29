@@ -15,8 +15,6 @@
     <meta property="og:description" content="世界を変えるチーズを作ろう．チーズアカデミーは，チーズ職人を養成するための学校です．" />
     <meta name="format-detection" content="telephone=no">
     <link rel="canonical" href="#">
-    <!-- <link rel="apple-touch-icon" href="images/common/touch-icon.png">
-    <link rel="shortcut icon" href="images/common/favicon.ico"> -->
     <script src="https://kit.fontawesome.com/b28496ef11.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
@@ -36,9 +34,14 @@
 
     <!-- header -->
     <header class="header">
-        <nav class="wrapper header-wrapper">
+        <button class="menu_trigger" id="menu_trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="wrapper header-wrapper" id="menu">
             <img src="img/header_logo.png" alt="ロゴ画像">
-            <ul class="nav-list">
+            <ul class="nav-list" id="nav_list">
                 <li class="nav-item"><a href="#about">About</a></li>
                 <li class="nav-item"><a href="#course">Course</a></li>
                 <li class="nav-item"><a href="#news">News</a></li>
@@ -54,60 +57,59 @@
         <!-- about -->
         <section id="about" class="about">
             <div class="wrapper">
-                <h2 class="text-center about__title">ABOUT</h2>
+                <h2 class="text-center about__title">About</h2>
                 <h3 class="text-center about__title02">チーズアカデミーについて</h3>
                 <div class="text-center about__text">
                     <p>チーズアカデミーは，チーズ職人養成学校です．</p>
                     <p>チーズの素晴らしさを，自給自足を通じて，できるだけ多くの人に知っていただきたい．<br>
-                        そして，食卓にはいつもチーズがあった，あの頃の当たり前をこの手で取り戻したい</p>
+                        そして，食卓にはいつもチーズがあった，あの頃の当たり前をこの手で取り戻したい.</p>
                     <p>そんな思いから，チーズ職人養成学校「チーズアカデミーFUKUOKA」は歩みを始めています．</p>
                     <p>卒業後，チーズ自給自足のバックアップはもちろんのこと，<br>
                         チーズ職人への就職・転職もサポートします．</p>
                 </div>
             </div>
-            <div></div>
+            <div class="about__image">
+                <img src="img/about_01.jpg" alt="">
+                <img src="img/about_02.jpg" alt="">
+                <img src="img/about_03.jpg" alt="">
+                <img src="img/about_04.jpg" alt="">
+            </div>
         </section>
         <!-- //about -->
 
         <!-- course -->
         <section id="course">
             <div class="wrapper">
-                <h2 class="text-center course__title">COURSE</h2>
+                <h2 class="text-center course__title">Course</h2>
                 <p class="text-center course__text">未経験からでもスタートができるよう，カリキュラムは多くの専門家や<br>
                     現役チーズ職人のアドバイスのもと，作られました．</p>
 
                 <div class="course-wrapper">
                     <img src="img/course_01.jpg" alt="">
                     <div class="course__01">
-                        <div class="course__01__item">
-                            <h4 class="course-box__title">本格的な農園を使った実地研修</h4>
-                            <p class="course-box__text">
-                                チーズアカデミーでは，本格的な農園を使った実地研修を行うことができます．プロとして活躍するチーズ職人も使用するような，広大で環境も整った農園を余すところなく使い，卒業時には本格的なチーズを自分の力で作れる実践力の養成を目指します．
-                            </p>
-                        </div>
+                        <h4 class="course-box__title">本格的な農園を使った実地研修</h4>
+                        <p class="course-box__text">
+                            チーズアカデミーでは，本格的な農園を使った実地研修を行うことができます．プロとして活躍するチーズ職人も使用するような，広大で環境も整った農園を余すところなく使い，卒業時には本格的なチーズを自分の力で作れる実践力の養成を目指します．
+                        </p>
                     </div>
                 </div>
 
                 <div class="course-wrapper02">
                     <img src="img/course_02.jpg" alt="">
                     <div class="course__02">
-                        <div class="course__02__item">
-                            <h4 class="course-box__title">必要な知識もしっかりと取得</h4>
-                            <p class="course-box__text">
-                                チーズ作りには，しっかりとした食に関する知識が欠かせません．チーズアカデミーでは，一流講師陣による，チーズ作りに必要ないろはを余すところなく学べます．チーズそのものでなく，栄養学全般を学ぶことも可能ですので，チーズ以外への展開も夢ではないでしょう．
-                            </p>
-                        </div>
+                        <h4 class="course-box__title">必要な知識もしっかりと取得</h4>
+                        <p class="course-box__text">
+                            チーズ作りには，しっかりとした食に関する知識が欠かせません．チーズアカデミーでは，一流講師陣による，チーズ作りに必要ないろはを余すところなく学べます．チーズそのものでなく，栄養学全般を学ぶことも可能ですので，チーズ以外への展開も夢ではないでしょう．
+                        </p>
                     </div>
                 </div>
                 <div class="course-wrapper">
                     <img src="img/course_03.jpg" alt="">
                     <div class="course__01">
-                        <div class="course__01__item">
-                            <h4 class="course-box__title">卒業制作はティスティング審査あり</h4>
-                            <p class="course-box__text">
-                                チーズアカデミーでは最後の2ヶ月間で卒業制作を実施．卒業制作として，チーズ作りを実際に行います．卒業後，一般参加によるティスティング審査があるため，作り手の目線だけでなく，消費者の目線から，卒業制作作品としてのチーズを，しっかりと評価いただくことができます．
-                            </p>
-                        </div>
+                        <h4 class="course-box__title">卒業制作はティスティング審査あり</h4>
+                        <p class="course-box__text">
+                            チーズアカデミーでは最後の2ヶ月間で卒業制作を実施．卒業制作として，チーズ作りを実際に行います．卒業後，一般参加によるティスティング審査があるため，作り手の目線だけでなく，消費者の目線から，卒業制作作品としてのチーズを，しっかりと評価いただくことができます．
+                        </p>
                     </div>
                 </div>
             </div>
@@ -117,8 +119,8 @@
         <!-- news -->
         <section id="news" class="news">
             <div class="wrapper">
-                <h2 class="news-title text-center">NEWS</h2>
-                <h3 class="news-title02 text-center">ニュース</h3>
+                <h2 class="news__title text-center">News</h2>
+                <h3 class="news__title02 text-center">ニュース</h3>
                 <ul class="news__list">
                     <li class="news__item">
                         <div class="news__eyecatch">
@@ -153,7 +155,7 @@
         <!-- access -->
         <section id="access" class="access">
             <div class="wrapper">
-                <h2 class="access__title text-center">ACCESS</h2>
+                <h2 class="access__title text-center">Access</h2>
                 <h3 class="access__title02 text-center">会社情報</h3>
                 <div class="gmap">
                     <iframe
@@ -181,7 +183,7 @@
         <!-- contact -->
         <section id="contact" class="contact">
             <div class="form-wrapper">
-                <h2 class="contact__title text-center">CONTACT</h2>
+                <h2 class="contact__title text-center">Contact</h2>
                 <h3 class="contact__title02 text-center">説明会お申し込み・お問い合わせ</h3>
                 <div class="contact__text text-center">
                     <p>ぜひ1度，足を運んでみませんか．説明会は随時開催中．<br>
@@ -228,8 +230,8 @@
         </div>
     </footer>
     <!-- //footer -->
-
-
+    </div>
+    <script src="js/main.js"></script>
 
 </body>
 
